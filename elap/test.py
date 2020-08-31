@@ -1,10 +1,20 @@
-user_input = float(input("Enter a real number: "))
+# ++ -+ -- +-
+print("Input a point (x,y):")
+x = float(input("x = ? "))
+y = float(input("y = ? "))
 
-if user_input < 15:
-    print(f"f({user_input:.3f}) = {2 * user_input + 10:.3f}")
+if x > 0 and y > 0:
+    print(f"The point ({x:.2f},{y:.2f}) is in quadrant 1.")
+elif x < 0 and y > 0:
+    print(f"The point ({x:.2f},{y:.2f}) is in quadrant 2.")
+elif x < 0 and y < 0:
+    print(f"The point ({x:.2f},{y:.2f}) is in quadrant 3.")
+elif x > 0 and y < 0:
+    print(f"The point ({x:.2f},{y:.2f}) is in quadrant 4.")
+elif x == 0 and y == 0:
+    print("The point (0.00,0.00) is at the origin.")
+elif x == 0:
+    print(f"The point (0.00,{y:2.f}) is on the y-axis.")
+elif y == 0:
+    print(f"The point ({x:.2f},0.00) is on the x-axis.")
 
-elif 15 < user_input < 35:
-    print(f"f({user_input:.3f}) = {3 * (user_input ** 2):.3f}")
-
-else:
-    print(f"f({user_input:.3f}) = {2 * (user_input ** 3) - 5:.3f}")

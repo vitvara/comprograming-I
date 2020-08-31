@@ -87,4 +87,4 @@ def arith_sum(n):
         answer_str = ""
     
 
-diamond(10)
+diamond(3)
