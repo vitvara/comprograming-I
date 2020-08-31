@@ -10,13 +10,13 @@ elif size_2**2 == size_1**2 + size_3 **2:
 elif size_3**2 == size_1**2 + size_2 **2:
     print("It's a right triangle.")
 
-elif size_1 + size_2 < size_3:
+elif size_1 + size_2 <= size_3:
     print("It's not a triangle.")
                                                                                                                                          
-elif size_1 + size_3 < size_2:
+elif size_1 + size_3 <= size_2:
     print("It's not a triangle.")
        
-elif size_3 + size_2 < size_1:
+elif size_3 + size_2 <= size_1:
     print("It's not a triangle.")
 else:
     print("It's a triangle but not a right triangle.")
