@@ -88,3 +88,4 @@ def arith_sum(n):
     
 
 diamond(3)
+arith_sum(10)
