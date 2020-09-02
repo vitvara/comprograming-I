@@ -24,7 +24,7 @@ def print_result():
     print(f"a   mysqrt(a)     math.sqrt(a)  diff")
     print(f"-   ---------     ------------  ----")
     # make for loop that loop 9 time
-    for i in range (1, 10): 
+    for i in range (1, 10):     
         # print all answer
         print(f"{i}   {round(my_root(i), 11):<14}{round(math.sqrt(i), 11):<14}{math.sqrt(i) - my_root(i)}")
 

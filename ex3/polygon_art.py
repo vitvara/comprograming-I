@@ -10,27 +10,11 @@ def polago(x , y, size, n, clr):
     turtle.speed(30)
     turtle.setheading(0)
     turtle.color(clr)
-    turtle.fillcolor(clr)
-
-    # draw first picture
-    turtle.penup()
-    # make random polagon
+    turtle.fillcolor(clr) 
     turtle.goto(x, y)
-    turtle.pendown()
-    turtle.begin_fill()
-    # random size
-    s = random.randint(10, size)
-    a = random.randint(3, 8)
-    for i in range (a):
-        turtle.forward(s)
-        turtle.left(360 / a)   
-    turtle.end_fill()   
-
     # draw random polagon    
     while n > 1:
-        turtle.penup()
         # make random polagon
-        turtle.goto(random.uniform(-300, 300), random.uniform(-300, 300))
         turtle.pendown()
         turtle.begin_fill()
         # random size
@@ -41,6 +25,8 @@ def polago(x , y, size, n, clr):
             turtle.left(360 / a)   
         turtle.end_fill()
         n -= 1
+        turtle.penup()
+        turtle.goto(random.uniform(-300, 300), random.uniform(-300, 300))
 
     turtle.done
 
