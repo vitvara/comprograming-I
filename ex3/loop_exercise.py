@@ -1,91 +1,107 @@
-# define fn fib
 def fib(n):
-    """
-    this funtion stack fib num and print out into ladder
+    """This function prints a Fibonacci sequence up to the nth Fibonacci
     """
     count = 0
     n1 = 0
     n2 = 1
-    string_num = "1 "
-    print(n2)
-    # fibnocii loop untill it's repeat the same amount as parameter input
+    string_num = ""
     while count <= n:
         fib_n = n1 + n2
         count += 1
         n1 = n2
         n2 = fib_n
         string_num += str(fib_n) + " "
-        print(string_num)
+    print(string_num)
 
-def diamond(a): 
-    """
-    function that make stupid diamond shape loop for something
+# fill me in
+
+
+print("fib(n) result:")
+n = 0
+while n < 10:
+    fib(n)
+    n += 1
+
+
+def diamond(n):
+    """This function prints a diamond shape of size n as shown in loop_exercise_result.txt
     """
     stri = " "
+    if n % 2 == 1:
+        # top diamond
+        for i in range(0, n):
+            stri += " " * (n // 2 - i)
+            stri += "*" * (2 * (i + 1))
+            print(stri)
+            stri = " "
 
-    for n in range(1, a * 2):
-        if n % 2 == 1:
-            #top diamond      
-            for i in range(0, n):
-                stri += " " * (n // 2 - i)
-                stri += "*" * (2 * (i + 1))
-                print(stri)
-                stri = " "
+            if n // 2 - i == 0:
+                break
+        # bot diamond
+        for i in range(0, n//2 + 1):
+            stri += " " * (i)
+            stri += "*" * (2*(n//2 - i + 1))
+            print(stri)
+            stri = " "
 
-                if n // 2 - i == 0:
-                    break
-            #bot diamond  
-            for i in range(0, n//2 + 1):
-                stri += " " * (i)
-                stri += "*" * (2*(n//2 - i + 1))
-                print(stri)
-                stri = " "
 
-            print("")
-        
+# fill me in
+print("diamond(n) result:")
+for i in range(0, 8 * 2):
+    diamond(i)
+    print("")
+
+
 def hailstone(n):
+    """This function prints a hailstone sequence whose details can be found in this link:
+        http://mathworld.wolfram.com/CollatzProblem.html
     """
-    function print hailstone sequence  
-    """
+
     hailstone_print = ""
     # loop hailstone
-    for i in range(1, n + 1):
-        hailstone_print += str(i) + " "
 
-        # check that number is not equal to 1
-        while i  != 1:
-            # check even number
-            if i % 2 == 0:
-                i = i // 2
-            
-                hailstone_print += str(i) + " "
-            # check odd number
-            else:
-                i = (3 * i) + 1
-            
-                hailstone_print += str(i) + " "
+    hailstone_print += str(n) + " "
 
-        print(hailstone_print)
-        hailstone_print = ""
+    # check that number is not equal to 1
+    while n != 1:
+        # check even number
+        if n % 2 == 0:
+            n = n // 2
+
+            hailstone_print += str(n) + " "
+        # check odd number
+        else:
+            n = (3 * n) + 1
+
+            hailstone_print += str(n) + " "
+
+    print(hailstone_print)
+    hailstone_print = ""
+# fill me in
+
+
+print("hailstone(n) result:")
+for i in range(1, 8):
+    hailstone(i)
+    print("")
+
 
 def arith_sum(n):
+    """This function prints the arithmetic sequence starting from 1 to nth together with its sum
     """
-    this function make a loop of arith sum
-    """
-    # define valuable
-    answer_str = ""
-    # loop all number
-    for i in range(1, n+1):
-        answer = 0
-        # loop number
-        for j in range(1, i+1):
-            answer_str += str(j) + " + "
-            answer += j
-            
-        print(f"{answer_str} = {answer}")
-        # set answer_str to ""
-        answer_str = ""
-    
+    answer = 1
+    answer_str = "1"
 
-diamond(3)
-arith_sum(10)
+    # set answer_str to ""
+    for i in range(2, n+1):
+
+        answer_str += " + " + str(i)
+        answer += i
+    print(f"{answer_str} = {answer}")
+# fill me in
+
+
+print("arith_sum(n) result:")
+for i in range(1, 10):
+    arith_sum(i)
+    print("")
