@@ -112,11 +112,14 @@ def buy_coffee():
             print("<=>" * 15)
 
 def resource_remain(w, m, coff, cup_):
+    """
+    funtion that calculate how many coffee machine need to add
+    """
     global water, milk, coffee, cups
     remaining_list = [water, milk ,coffee, cups]
     needed_list = [w, m, coff, cup_]
     name_resource = ["water", "milk", "coffee", "cup"]
-
+    # check unit
     for i in range(len(remaining_list)):
         if needed_list[i] > remaining_list[i]:
             if remaining_list[i] in [water, milk]:
@@ -128,6 +131,9 @@ def resource_remain(w, m, coff, cup_):
         
 
 def action_():
+    """
+    funtion choose action
+    """
     global water, milk, coffee, cups, money
     while True:
         print("+=+" * 10)
