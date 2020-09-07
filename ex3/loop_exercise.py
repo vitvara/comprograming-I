@@ -27,8 +27,9 @@ def diamond(n):
     """This function prints a diamond shape of size n as shown in loop_exercise_result.txt
     """
     stri = " "
-    if n % 2 == 1:
-        # top diamond
+    # top diamond
+    
+
         for i in range(0, n):
             stri += " " * (n // 2 - i)
             stri += "*" * (2 * (i + 1))
@@ -44,10 +45,13 @@ def diamond(n):
             print(stri)
             stri = " "
 
+        print("")
+
 
 # fill me in
+
 print("diamond(n) result:")
-for i in range(0, 8 * 2):
+for i in range(0, 8):
     diamond(i)
     print("")
 
@@ -92,16 +96,18 @@ def arith_sum(n):
     answer = 1
     answer_str = "1"
 
+    
     # set answer_str to ""
-    for i in range(2, n+1):
+    for i in range(2, n):
 
         answer_str += " + " + str(i)
-        answer += i
+        answer += n
     print(f"{answer_str} = {answer}")
 # fill me in
-
 
 print("arith_sum(n) result:")
 for i in range(1, 10):
     arith_sum(i)
-    print("")
+    print("") 
+
+
